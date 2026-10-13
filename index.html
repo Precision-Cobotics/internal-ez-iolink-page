@@ -3,10 +3,67 @@ layout: default
 title: EZ-IOLink URCap
 ---
 
-# EZ-IOLink URCap
+<style>
+  .release {
+    margin: 0 0 1.6rem;
+    color: #606c71;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+  .download {
+    display: inline-block;
+    margin: 0.4rem 0 0.6rem;
+    padding: 0.75rem 1.25rem;
+    background: #159957;
+    color: #fff !important;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.3rem;
+  }
+  .download:hover {
+    background: #155799;
+  }
+  .file-note {
+    margin: 0 0 2rem;
+    color: #606c71;
+    font-size: 0.92rem;
+  }
+  .section {
+    margin: 0 0 2rem;
+  }
+  .section h2 {
+    margin-bottom: 0.6rem;
+  }
+  ol.steps {
+    padding-left: 1.2rem;
+  }
+  ol.steps li {
+    margin: 0.35rem 0;
+  }
+</style>
 
-PolyScope 5 URCap, version 1.6.0.1.
+<p class="release">Version 1.6.0.1 &middot; PolyScope 5</p>
 
-[Download iolink-1.6.0.1.urcap](iolink-1.6.0.1.urcap)
+<p>EZ-IOLink connects a Universal Robots controller to Balluff IO-Link masters. Use it to name ports, read process data, and write process data from a robot program, including writes tied to program state and digital inputs.</p>
 
-On the robot: Settings, URCaps, plus, select that file, then restart PolyScope.
+<p><a class="download" href="iolink-1.6.0.1.urcap">Download iolink-1.6.0.1.urcap</a></p>
+<p class="file-note">Also listed on the <a href="https://github.com/Precision-Cobotics/internal-ez-iolink-page/releases/tag/v1.6.0.1">v1.6.0.1 release</a>.</p>
+
+<div class="section">
+  <h2>Install</h2>
+  <ol class="steps">
+    <li>On the robot, open Settings, then System, then URCaps.</li>
+    <li>Press + and select <code>iolink-1.6.0.1.urcap</code>.</li>
+    <li>Restart PolyScope.</li>
+  </ol>
+  <p>After restart, open the installation and run Connect so each port can identify its device. Compatible with CB3 and e-Series controllers running PolyScope 5.</p>
+</div>
+
+<div class="section">
+  <h2>In this version</h2>
+  <ul>
+    <li>A port keeps its saved device when a scan misses it, so IO-Link Write nodes stay configured.</li>
+    <li>Conditional writes can follow standard digital inputs and configurable inputs, as well as program state.</li>
+    <li>Saving a conditional write stores one condition, so a program no longer reloads a single write as many cards.</li>
+  </ul>
+</div>

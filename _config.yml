@@ -1,3 +1,4 @@
-title: EZ-IOLink URCap
-description: PolyScope 5 download for the Precision Cobotics EZ-IOLink URCap
+title: EZ-IOLink
+description: IO-Link URCap for Universal Robots PolyScope 5
 theme: jekyll-theme-cayman
+show_downloads: false
